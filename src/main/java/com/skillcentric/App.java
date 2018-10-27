@@ -1,14 +1,12 @@
 package com.skillcentric;
 
-import java.util.logging.Logger;
-
 public class App {
-
-    private static Logger log = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) {
 
-
-
+        Shape triangle = new FillColorDecorator(Color.RED,
+                new LineStyleDecorator(LineStyle.DASH,
+                        new LineThicknessDecorator(2.0d, new Triangle())));
+        triangle.draw();
     }
 }
